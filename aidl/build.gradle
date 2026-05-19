@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "rikka.shizuku.aidl"
+    namespace = "af.shizuku.aidl"
     buildFeatures {
         buildConfig = false
         aidl = true

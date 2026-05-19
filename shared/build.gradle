@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "rikka.shizuku.shared"
+    namespace = "af.shizuku.shared"
     buildTypes {
         release {
             minifyEnabled = false

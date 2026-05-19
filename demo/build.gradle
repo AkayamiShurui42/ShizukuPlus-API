@@ -4,9 +4,9 @@ plugins {
 }
 
 android {
-    namespace = "rikka.shizuku.demo"
+    namespace = "af.shizuku.demo"
     defaultConfig {
-        applicationId = "rikka.shizuku.demo"
+        applicationId = "af.shizuku.demo"
         versionCode = 1
         versionName = api_version_name
         externalNativeBuild {
