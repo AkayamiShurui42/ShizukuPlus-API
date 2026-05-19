@@ -1,3 +1,3 @@
--keepclassmembers class rikka.shizuku.demo.service.UserService {
+-keepclassmembers class af.shizuku.demo.service.UserService {
     public <init>(...);
 }
