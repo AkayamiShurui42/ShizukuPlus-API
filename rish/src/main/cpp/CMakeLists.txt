@@ -22,8 +22,8 @@ find_package(cxx REQUIRED CONFIG)
 add_library(rish SHARED
         main.cpp
         pts.cpp
-        rikka_rish_RishTerminal.cpp
-        rikka_rish_RishHost.cpp)
+        af_rish_RishTerminal.cpp
+        af_rish_RishHost.cpp)
 
 target_link_libraries(rish log cxx::cxx)
 

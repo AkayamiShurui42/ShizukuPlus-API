@@ -278,8 +278,8 @@ static jint RishHost_waitFor(JNIEnv *env, jclass clazz, jint pid) {
     return -1;
 }
 
-int rikka_rish_RishHost_registerNatives(JNIEnv *env) {
-    auto clazz = env->FindClass("rikka/rish/RishHost");
+int af_rish_RishHost_registerNatives(JNIEnv *env) {
+    auto clazz = env->FindClass("af/rish/RishHost");
     JNINativeMethod methods[] = {
             {"start",         "([BI[BI[BBIII)[I", (void *) RishHost_startHost},
             {"setWindowSize", "(IJ)V",            (void *) RishHost_setWindowSize},

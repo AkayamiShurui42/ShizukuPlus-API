@@ -217,6 +217,12 @@ public class ShizukuProvider extends ContentProvider {
         if (container == null) {
             container = extras.getParcelable("af.shizuku.intent.extra.BINDER");
         }
+        if (container == null) {
+            container = extras.getParcelable("rikka.shizuku.intent.extra.BINDER");
+        }
+        if (container == null) {
+            container = extras.getParcelable("moe.shizuku.privileged.api.intent.extra.BINDER");
+        }
         
         if (container != null && container.binder != null) {
             Log.d(TAG, "binder received");
@@ -229,6 +235,8 @@ public class ShizukuProvider extends ContentProvider {
                 Intent intent = new Intent(ACTION_BINDER_RECEIVED)
                         .putExtra(EXTRA_BINDER, container)
                         .putExtra("af.shizuku.intent.extra.BINDER", container)
+                        .putExtra("rikka.shizuku.intent.extra.BINDER", container)
+                        .putExtra("moe.shizuku.privileged.api.intent.extra.BINDER", container)
                         .setPackage(getContext().getPackageName());
                 getContext().sendBroadcast(intent);
             }
@@ -244,6 +252,8 @@ public class ShizukuProvider extends ContentProvider {
         BinderContainer container = new BinderContainer(binder);
         reply.putParcelable(EXTRA_BINDER, container);
         reply.putParcelable("af.shizuku.intent.extra.BINDER", container);
+        reply.putParcelable("rikka.shizuku.intent.extra.BINDER", container);
+        reply.putParcelable("moe.shizuku.privileged.api.intent.extra.BINDER", container);
         return true;
     }
 
