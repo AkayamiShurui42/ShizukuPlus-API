@@ -450,9 +450,12 @@ public abstract class Service<
             }
         }
 
+        data.setDataPosition(0);
         if (rishService.onTransact(code, data, reply, flags)) {
             return true;
         }
+
+        data.setDataPosition(0);
         return super.onTransact(code, data, reply, flags);
     }
 }
