@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "af.shizuku.provider"
+    namespace = "rikka.shizuku.provider"
     defaultConfig {
         consumerProguardFiles = ["consumer-rules.pro"]
     }

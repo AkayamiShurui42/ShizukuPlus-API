@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "af.shizuku.server"
+    namespace = "moe.shizuku.server"
     buildTypes {
         release {
             minifyEnabled = false

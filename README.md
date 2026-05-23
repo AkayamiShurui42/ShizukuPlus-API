@@ -111,7 +111,7 @@ Shizuku+-API is built on a **Translation Layer**.
 **Result**: Your app works everywhere, but runs better on Shizuku+.
 
 ## 📱 Documentation & Original API
-For the core logic, `UserService` documentation, and AIDL definitions, please refer to the original [Shizuku-API](https://github.com/RikkaApps/Shizuku-API) repository. Shizuku+-API includes all original `af.shizuku.Shizuku` methods.
+For the core logic, `UserService` documentation, and AIDL definitions, please refer to the original [Shizuku-API](https://github.com/RikkaApps/Shizuku-API) repository. Shizuku+-API includes all original `rikka.shizuku.Shizuku` methods.
 
 ## 📃 License
 [MIT License](LICENSE)

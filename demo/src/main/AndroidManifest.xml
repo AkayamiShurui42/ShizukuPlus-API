@@ -19,7 +19,7 @@
 
         <!-- This provider is required by Shizuku, remove this if your app only supports Sui -->
         <provider
-            android:name="af.shizuku.ShizukuProvider"
+            android:name="rikka.shizuku.ShizukuProvider"
             android:authorities="${applicationId}.shizuku"
             android:enabled="true"
             android:exported="true"
