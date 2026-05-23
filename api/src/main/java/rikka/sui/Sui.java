@@ -3,8 +3,8 @@ package rikka.sui;
 import android.os.IBinder;
 import android.os.Parcel;
 
-import af.shizuku.Shizuku;
-import af.shizuku.SystemServiceHelper;
+import rikka.shizuku.Shizuku;
+import rikka.shizuku.SystemServiceHelper;
 
 public class Sui {
 

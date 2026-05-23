@@ -1,4 +1,4 @@
-package af.rish;
+package rikka.rish;
 
 import android.util.Log;
 

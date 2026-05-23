@@ -8,7 +8,7 @@ import android.util.Log;
 import org.lsposed.hiddenapibypass.HiddenApiBypass;
 
 import rikka.shizuku.demo.util.ApplicationUtils;
-import af.sui.Sui;
+import rikka.sui.Sui;
 
 public class DemoApplication extends Application {
 

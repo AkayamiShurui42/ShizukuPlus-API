@@ -1,4 +1,4 @@
-package af.rish;
+package rikka.rish;
 
 import android.annotation.SuppressLint;
 import android.os.IBinder;

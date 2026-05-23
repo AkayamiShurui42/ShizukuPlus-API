@@ -18,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import rikka.shizuku.BinderContainer;
-import af.sui.Sui;
+import rikka.sui.Sui;
 
 /**
  * <p>
