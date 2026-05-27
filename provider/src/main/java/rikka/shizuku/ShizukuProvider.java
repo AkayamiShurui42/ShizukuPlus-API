@@ -133,7 +133,7 @@ public class ShizukuProvider extends ContentProvider {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             context.registerReceiver(receiver, new IntentFilter(ACTION_BINDER_RECEIVED), Context.RECEIVER_NOT_EXPORTED);
         } else {
-            context.registerReceiver(receiver, new IntentFilter(ACTION_BINDER_RECEIVED));
+            androidx.core.content.ContextCompat.registerReceiver(context, receiver, new IntentFilter(ACTION_BINDER_RECEIVED), androidx.core.content.ContextCompat.RECEIVER_NOT_EXPORTED);
         }
 
         Bundle reply;
@@ -218,10 +218,10 @@ public class ShizukuProvider extends ContentProvider {
             container = extras.getParcelable("rikka.shizuku.intent.extra.BINDER");
         }
         if (container == null) {
-            container = extras.getParcelable("rikka.shizuku.intent.extra.BINDER");
+            container = extras.getParcelable("moe.shizuku.privileged.api.intent.extra.BINDER");
         }
         if (container == null) {
-            container = extras.getParcelable("moe.shizuku.privileged.api.intent.extra.BINDER");
+            container = extras.getParcelable("dev.rikka.shizuku.intent.extra.BINDER");
         }
         
         if (container != null && container.binder != null) {
@@ -235,8 +235,8 @@ public class ShizukuProvider extends ContentProvider {
                 Intent intent = new Intent(ACTION_BINDER_RECEIVED)
                         .putExtra(EXTRA_BINDER, container)
                         .putExtra("rikka.shizuku.intent.extra.BINDER", container)
-                        .putExtra("rikka.shizuku.intent.extra.BINDER", container)
                         .putExtra("moe.shizuku.privileged.api.intent.extra.BINDER", container)
+                        .putExtra("dev.rikka.shizuku.intent.extra.BINDER", container)
                         .setPackage(getContext().getPackageName());
                 getContext().sendBroadcast(intent);
             }
@@ -252,8 +252,8 @@ public class ShizukuProvider extends ContentProvider {
         BinderContainer container = new BinderContainer(binder);
         reply.putParcelable(EXTRA_BINDER, container);
         reply.putParcelable("rikka.shizuku.intent.extra.BINDER", container);
-        reply.putParcelable("rikka.shizuku.intent.extra.BINDER", container);
         reply.putParcelable("moe.shizuku.privileged.api.intent.extra.BINDER", container);
+        reply.putParcelable("dev.rikka.shizuku.intent.extra.BINDER", container);
         return true;
     }
 
