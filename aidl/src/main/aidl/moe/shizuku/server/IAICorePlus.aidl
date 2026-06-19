@@ -44,4 +44,9 @@ interface IAICorePlus {
      * Get the current window hierarchy (UI elements and text) for AI parsing.
      */
     String getWindowHierarchy();
+
+    /**
+     * Get runtime performance/process stats of the Shizuku server.
+     */
+    Bundle getServerStats();
 }

@@ -11,6 +11,7 @@ import moe.shizuku.server.IContinuityBridge;
 import moe.shizuku.server.IOverlayManagerPlus;
 import moe.shizuku.server.INetworkGovernorPlus;
 import moe.shizuku.server.IActivityManagerPlus;
+import moe.shizuku.server.IAIAutomationBridge;
 
 interface IShizukuService {
 
@@ -81,4 +82,6 @@ interface IShizukuService {
     String getPlusSetting(String key) = 119;
 
     boolean isPlusFeatureEnabled(String key) = 120;
+
+    void registerAIAutomationBridge(IAIAutomationBridge bridge) = 121;
  }
