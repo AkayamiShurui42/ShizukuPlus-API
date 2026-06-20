@@ -28,6 +28,10 @@ public class ClientRecord {
     }
 
     public void dispatchRequestPermissionResult(int requestCode, boolean allowed) {
+        if (client == null) {
+            LOGGER.w("dispatchRequestPermissionResult skipped: no client binder for (uid=%d, pid=%d, package=%s)", uid, pid, packageName);
+            return;
+        }
         Bundle reply = new Bundle();
         reply.putBoolean(REQUEST_PERMISSION_REPLY_ALLOWED, allowed);
         try {
