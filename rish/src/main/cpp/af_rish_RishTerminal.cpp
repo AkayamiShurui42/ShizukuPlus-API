@@ -129,7 +129,7 @@ int af_rish_RishTerminal_registerNatives(JNIEnv *env) {
     pthread_mutex_init(&mutex, nullptr);
     pthread_mutex_init(&winch_mutex, nullptr);
 
-    auto clazz = env->FindClass("af/rish/RishTerminal");
+    auto clazz = env->FindClass("rikka/rish/RishTerminal");
     JNINativeMethod methods[] = {
             {"prepare",                 "()B",     (void *) RishTerminal_prepare},
             {"start",                   "(BIII)I", (void *) RishTerminal_start},
